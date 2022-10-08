@@ -14,9 +14,9 @@ pipeline {
                       }
              stage ('docker-run'){
                   steps {
-                 /*  sh "docker stop 22Q3"
+                     sh "docker stop 22Q3"
                      sh "docker container rm 22Q3"
-                  */ sh "docker run -itdp 8080:80 --name 22Q3 httpd"
+                     sh "docker run -itdp 8080:80 --name 22Q3 httpd"
                      sh "chmod 777 /mnt/docker/3/docker/index.html"
                      sh "docker cp /mnt/docker/3/docker/index.html 22Q3:/usr/local/apache2/htdocs/"
                      }
