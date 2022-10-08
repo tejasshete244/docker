@@ -14,7 +14,7 @@ pipeline {
                       }
              stage ('docker-run'){
                   steps {
-                     sh "docker run -itdp 80:80 --name 22Q1 httpd"
+                     sh "docker run -itdp 90:80 --name 22Q1 httpd"
                      sh "docker cp /mnt/docker/2/docker/index.html 22Q1:/usr/local/apache2/htdocs/"
                      }
                 }
