@@ -17,9 +17,10 @@ pipeline {
                      sh "docker stop 22Q1"
                      sh "docker container rm 22Q1"
                      sh "docker run -itdp 80:80 --name 22Q1 httpd"
+                     sh "chmod 777 /mnt/docker/1/docker/index.html"
                      sh "docker cp /mnt/docker/1/docker/index.html 22Q1:/usr/local/apache2/htdocs/"
                      sh "docker exec 22Q1 bash"
-                     sh "chmod 777 *"
+                     
                     
                      
                      }
