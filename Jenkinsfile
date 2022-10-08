@@ -9,7 +9,7 @@ pipeline {
              stage ('git-clone'){
                   steps {
                      sh "rm -rf *"
-                     sh "git clone https://github.com/tejasshete244/docker.git -b master"
+                     sh "git clone https://github.com/tejasshete244/docker.git -b 22Q3"
                         }
                       }
              stage ('docker-run'){
